@@ -6,18 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Dynamic title';
-
-  inputValue = '';
-  // tslint:disable-next-line:typedef
-  onInput(event: KeyboardEvent) {
-    this.inputValue = (<HTMLInputElement> event.target).value;
+  title = 'initial';
+  onInput = e => {
+    this.title = e.target.value;
   }
-  showAlert = () => {
-    alert('Hello');
-  }
-
-  onBlur = (str: string) => {
-    this.inputValue = str;
+  bg = true;
+  onChange = () => {
+    this.bg = !this.bg;
   }
 }
