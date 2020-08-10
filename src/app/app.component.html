@@ -6,7 +6,16 @@
 
 <h1>Hello Angular!</h1>
 
-<img [src]="reactUrl" alt="" width="150px"/>
+<input
+  type="text"
+  (keyup.enter)="onInput($event)"
+  (blur)="onBlur(myInput.value)"
+  #myInput
+/>
+
+<button (click)="showAlert()">Click</button>
+
+<p><strong>{{ inputValue }}</strong></p>
 
 <app-post4></app-post4>
 <hr />
