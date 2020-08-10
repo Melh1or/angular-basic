@@ -1,6 +1,8 @@
 {
   "extends": "tslint:recommended",
   "rules": {
+    "object-curly-spacing": ["error", "always", { "objectsInObjects": false }],
+    "no-trailing-whitespace": false,
     "no-angle-bracket-type-assertion": false,
     "align": {
       "options": [

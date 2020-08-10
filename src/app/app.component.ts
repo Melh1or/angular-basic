@@ -16,15 +16,9 @@ export class AppComponent {
     { title: 'Learn Angular', text: 'Some text', id: 1 },
     { title: 'Learn RxJS', text: 'Some text', id: 2 },
   ];
-  // titleValue = '';
-  // textValue = '';
-  // addPost = () => {
-  //   const component = {
-  //     title: this.titleValue,
-  //     text: this.textValue
-  //   };
-  //   this.state.push(component);
-  //   this.titleValue = '';
-  //   this.textValue = '';
-  // }
+
+  // tslint:disable-next-line:typedef
+  updatePosts(post: Post) {
+    this.posts.unshift(post);
+  }
 }
