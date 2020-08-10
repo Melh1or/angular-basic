@@ -1,23 +1,10 @@
 <h1>Hello Angular!</h1>
 
-<button (click)="onChange()">Change BG</button>
+<button (click)="toggle = !toggle">Change BG</button>
+<button (click)="toggle = 123">Default</button>
 
-<!--<div [ngStyle]="{-->
-<!--  width: '200px',-->
-<!--  height: '200px',-->
-<!--  borderRadius: '5px',-->
-<!--  border: '1px solid #ccc',-->
-<!--  background: bg ? 'red' : 'blue'-->
-<!--}"></div>-->
-
-<!--<p-->
-<!--  [ngClass]="{-->
-<!--    red: bg,-->
-<!--    blue: !bg-->
-<!--  }"-->
-<!--&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, perferendis?</p>-->
-
-<p
-  [class.blue]="!bg"
-  [class.red]="bg"
->Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, itaque.</p>
+<div [ngSwitch]="toggle">
+  <p *ngSwitchCase="false" class="red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, necessitatibus.</p>
+  <p *ngSwitchCase="true" class="blue">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, necessitatibus.</p>
+  <p *ngSwitchDefault>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam aut, autem corporis debitis dignissimos dolor eius ex exercitationem ipsam laboriosam laudantium minima perferendis placeat repellat sit tenetur voluptate voluptatum.</p>
+</div>

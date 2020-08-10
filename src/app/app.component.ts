@@ -10,8 +10,8 @@ export class AppComponent {
   onInput = e => {
     this.title = e.target.value;
   }
-  bg = true;
+  toggle: any = true;
   onChange = () => {
-    this.bg = !this.bg;
+    this.toggle = !this.toggle;
   }
 }
