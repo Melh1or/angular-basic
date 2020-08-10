@@ -2,12 +2,22 @@
 
 <button (click)="onChange()">Change BG</button>
 
-<div [ngStyle]="{
-  width: '200px',
-  height: '200px',
-  borderRadius: '5px',
-  border: '1px solid #ccc',
-  background: bg ? 'red' : 'blue'
-}">
+<!--<div [ngStyle]="{-->
+<!--  width: '200px',-->
+<!--  height: '200px',-->
+<!--  borderRadius: '5px',-->
+<!--  border: '1px solid #ccc',-->
+<!--  background: bg ? 'red' : 'blue'-->
+<!--}"></div>-->
 
-</div>
+<!--<p-->
+<!--  [ngClass]="{-->
+<!--    red: bg,-->
+<!--    blue: !bg-->
+<!--  }"-->
+<!--&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, perferendis?</p>-->
+
+<p
+  [class.blue]="!bg"
+  [class.red]="bg"
+>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, itaque.</p>
