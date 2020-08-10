@@ -1,10 +1,3 @@
 <h1>Hello Angular!</h1>
 
-<button (click)="toggle = !toggle">Change BG</button>
-<button (click)="toggle = 123">Default</button>
-
-<div [ngSwitch]="toggle">
-  <p *ngSwitchCase="false" class="red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, necessitatibus.</p>
-  <p *ngSwitchCase="true" class="blue">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, necessitatibus.</p>
-  <p *ngSwitchDefault>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam aut, autem corporis debitis dignissimos dolor eius ex exercitationem ipsam laboriosam laudantium minima perferendis placeat repellat sit tenetur voluptate voluptatum.</p>
-</div>
+<p>{{ now | date }}</p>

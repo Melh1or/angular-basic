@@ -6,12 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'initial';
-  onInput = e => {
-    this.title = e.target.value;
-  }
-  toggle: any = true;
-  onChange = () => {
-    this.toggle = !this.toggle;
-  }
+  now: Date = new Date();
 }
