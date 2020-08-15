@@ -1,0 +1,16 @@
+<div class="container">
+  <h2>Todo Angular List</h2>
+
+  <app-todo-form
+    (addTodo)="addTodo($event)"
+  ></app-todo-form>
+
+  <ul>
+    <app-todo-item
+      *ngFor="let todo of todoList"
+      [todo]="todo"
+      (toggleTodo)="toggleTodo($event)"
+      (deleteTodo)="deleteTodo($event)"
+    ></app-todo-item>
+  </ul>
+</div>

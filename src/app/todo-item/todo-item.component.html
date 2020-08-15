@@ -1,0 +1,13 @@
+<li class="card-panel row">
+  <p class="col s11">
+    <label>
+      <input type="checkbox" [checked]="todo.done" (change)="toggleDone()">
+      <span>{{ todo.title }}</span>
+    </label>
+  </p>
+  <i
+    (click)="deleteTodo.emit(todo.id)"
+    style="cursor: pointer"
+    class="material-icons col s1"
+  >delete</i>
+</li>
